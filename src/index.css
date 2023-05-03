@@ -9,3 +9,12 @@
   align-items: center;
   justify-content: center;
 }
+
+.blogFaq {
+  font-size: 40px;
+  margin-top: 20px;
+}
+
+.blogAns {
+  font-size: 20px;
+}

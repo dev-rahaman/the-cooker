@@ -9,6 +9,7 @@ import Error from "../Pages/Error/Error";
 import Chef from "../Pages/Chef/Chef";
 import Tabs from "../Components/Tabs/Tabs";
 import PrivateRoutes from "./PrivateRoutes";
+import MyPdf from "../Components/PDF/MyPdf";
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
       {
         path: "*",
         element: <Error></Error>,
+      },
+      {
+        path: "/pdf",
+        element: <MyPdf></MyPdf>,
       },
       {
         path: "/tabs/:id",
