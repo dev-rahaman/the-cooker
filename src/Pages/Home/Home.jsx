@@ -7,6 +7,7 @@ import PopularChef from "../../Components/PopularChef/PopularChef";
 import LatestRecipes from "../../Components/LatestRecipes/LatestRecipes";
 import RandomChef from "../../Components/RandomChef/RandomChef";
 import Tabs from "../../Components/Tabs/Tabs";
+import CountdownTimer from "../../Components/CountdownTimer/CountdownTimer";
 
 const Home = () => {
   const loadData = useLoaderData();
@@ -56,10 +57,9 @@ const Home = () => {
             width: "50%",
           }}
         >
-          hi
+          <CountdownTimer></CountdownTimer>
         </div>
       </div>
-      <div className="spinner"></div>
     </div>
   );
 };

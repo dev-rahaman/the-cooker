@@ -1,27 +1,23 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import "./Chef.css";
-import { Link, useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import Recipes from "../Recepeis/Recipes";
 
 const Chef = () => {
   const loadData = useLoaderData();
   const {
-    _id,
     numbersOfRecipes,
     chefPicture,
     chefName,
     yearsOfExperience,
     bio,
-    address,
     description,
     chefLikes,
-    chefBanner,
   } = loadData;
 
   return (
     <>
-      {" "}
       <div
         style={{
           margin: "20px",

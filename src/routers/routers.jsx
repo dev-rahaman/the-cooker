@@ -9,7 +9,7 @@ import Error from "../Pages/Error/Error";
 import Chef from "../Pages/Chef/Chef";
 import Tabs from "../Components/Tabs/Tabs";
 import PrivateRoutes from "./PrivateRoutes";
-import MyPdf from "../Components/PDF/MyPdf";
+import CountdownTimer from "../Components/CountdownTimer/CountdownTimer";
 
 const router = createBrowserRouter([
   {
@@ -46,12 +46,12 @@ const router = createBrowserRouter([
         element: <Register></Register>,
       },
       {
-        path: "*",
-        element: <Error></Error>,
+        path: "/countdownTimer",
+        element: <CountdownTimer></CountdownTimer>,
       },
       {
-        path: "/pdf",
-        element: <MyPdf></MyPdf>,
+        path: "*",
+        element: <Error></Error>,
       },
       {
         path: "/tabs/:id",
