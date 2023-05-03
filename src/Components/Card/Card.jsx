@@ -5,6 +5,7 @@ import "./Card.css";
 import { Link } from "react-router-dom";
 
 const Card = ({ data }) => {
+  console.log(data);
   const {
     chef_id,
     numbersOfRecipes,
@@ -14,8 +15,8 @@ const Card = ({ data }) => {
     bio,
     address,
     description,
-    likes,
     chefBanner,
+    chefLikes,
   } = data;
   return (
     <div
@@ -54,7 +55,7 @@ const Card = ({ data }) => {
           Number of recipe {numbersOfRecipes}
         </p>
         <p className="likes" style={{ fontSize: "20px" }}>
-          Likes: {data.recipes.likes}
+          Likes: {chefLikes}
         </p>
         <button
           className="view-recipes-button"

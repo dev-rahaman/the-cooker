@@ -9,8 +9,8 @@ const Recipe = ({ nr }) => {
   const [dis, setDis] = useState(false);
   const [bgColor, setBgColor] = useState("none");
 
-  const { banner, recipeName, likes, ingredients, ratting, cookingMethod } = nr;
-  console.log(recipeName);
+  const { banner, recipeName, chefLikes, ingredients, ratting, cookingMethod } =
+    nr;
 
   const handleFavoriteBtn = () => {
     toast.success(`Welcome, ${recipeName}!`);
@@ -45,15 +45,11 @@ const Recipe = ({ nr }) => {
           className="chef-name"
           style={{ fontSize: "30px", marginBottom: "10px", height: "50px" }}
         >
-          <b>Name:</b> {recipeName}
+          <b>Recipe Name:</b> {recipeName}
         </h2>
 
         <p className="likes" style={{ fontSize: "20px" }}>
-          <b>Likes:</b> {likes}
-        </p>
-
-        <p className="likes" style={{ fontSize: "20px" }}>
-          <b>Ratings:</b> {ratting}
+          <b>Likes:</b> {chefLikes}
         </p>
 
         <span className="num-recipes" style={{ fontSize: "20px" }}>
@@ -106,6 +102,10 @@ const Recipe = ({ nr }) => {
             </li>
           </ol>
         </span>
+
+        <p className="likes" style={{ fontSize: "20px" }}>
+          <b>Ratings:</b> {ratting}
+        </p>
 
         <button
           onClick={handleFavoriteBtn}

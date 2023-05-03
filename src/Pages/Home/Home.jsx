@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useState } from "react";
 import Slider from "../../Components/Slider/Slider";
 import { useLoaderData } from "react-router-dom";
 import Card from "../../Components/Card/Card";
@@ -10,6 +10,7 @@ import Tabs from "../../Components/Tabs/Tabs";
 
 const Home = () => {
   const loadData = useLoaderData();
+  const [loading, setLoading] = useState(false);
 
   return (
     <div>
@@ -34,9 +35,31 @@ const Home = () => {
           <RandomChef></RandomChef>
         </div>
       </div>
-      <div style={{ marginLeft: "27px" }}>
-        <Tabs></Tabs>
+      <div style={{ display: "flex", margin: "50px 0" }}>
+        <div
+          style={{
+            marginLeft: "27px",
+            backgroundColor: "#efefef",
+            padding: "10px",
+            borderRadius: "10px",
+            width: "50%",
+          }}
+        >
+          <Tabs></Tabs>
+        </div>
+        <div
+          style={{
+            marginLeft: "27px",
+            backgroundColor: "#efefef",
+            padding: "10px",
+            borderRadius: "10px",
+            width: "50%",
+          }}
+        >
+          hi
+        </div>
       </div>
+      <div className="spinner"></div>
     </div>
   );
 };

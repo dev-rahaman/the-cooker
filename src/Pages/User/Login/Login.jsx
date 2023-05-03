@@ -47,6 +47,7 @@ const Login = () => {
       .then((result) => {
         const loggedUser = result.user;
         // console.log(loggedUser);
+        setError(error.message);
         toast.success("Login successfully!");
       })
       .catch((error) => {

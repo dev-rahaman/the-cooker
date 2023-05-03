@@ -6,7 +6,6 @@ import Recipes from "../Recepeis/Recipes";
 
 const Chef = () => {
   const loadData = useLoaderData();
-  console.log(loadData);
   const {
     _id,
     numbersOfRecipes,
@@ -16,7 +15,7 @@ const Chef = () => {
     bio,
     address,
     description,
-    likes,
+    chefLikes,
     chefBanner,
   } = loadData;
 
@@ -55,7 +54,7 @@ const Chef = () => {
         </p>
         <p className="likes" style={{ fontSize: "20px" }}>
           <b> Likes: </b>
-          {likes}
+          {chefLikes}
         </p>
         <p className="likes" style={{ fontSize: "20px" }}>
           <b> Numbers Of Recipes: </b>

@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import "./Footer.css";
-import { Link } from "react-router-dom";
+import ActiveLilnk from "../../../Components/ActiveLink/ActiveLilnk";
 
 const Footer = () => {
   return (
@@ -25,19 +25,19 @@ const Footer = () => {
             <h4>Ingredients</h4>
             <ul>
               <li>
-                <Link to="">Vegetables</Link>
+                <ActiveLilnk to="/vegetables">Vegetables</ActiveLilnk>
               </li>
               <li>
-                <Link to="">Fruits</Link>
+                <ActiveLilnk to="/fruits">Fruits</ActiveLilnk>
               </li>
               <li>
-                <Link to="">Meat</Link>
+                <ActiveLilnk to="/meat">Meat</ActiveLilnk>
               </li>
               <li>
-                <Link to="">Dairy</Link>
+                <ActiveLilnk to="/dairy">Dairy</ActiveLilnk>
               </li>
               <li>
-                <Link to="">Grains</Link>
+                <ActiveLilnk to="/grains">Grains</ActiveLilnk>
               </li>
             </ul>
           </div>
@@ -45,19 +45,25 @@ const Footer = () => {
             <h4>Popular</h4>
             <ul>
               <li>
-                <Link to="">Chocolate Chip Cookies</Link>
+                <ActiveLilnk to="/chocolatechipcookies">
+                  Chocolate Chip Cookies
+                </ActiveLilnk>
               </li>
               <li>
-                <Link to="">Pesto Pasta</Link>
+                <ActiveLilnk to="/pestopasta">Pesto Pasta</ActiveLilnk>
               </li>
               <li>
-                <Link to="">Chicken Parmesan</Link>
+                <ActiveLilnk to="/chickenparmesan">
+                  Chicken Parmesan
+                </ActiveLilnk>
               </li>
               <li>
-                <Link to="">Taco Salad</Link>
+                <ActiveLilnk to="/tacosalad">Taco Salad</ActiveLilnk>
               </li>
               <li>
-                <Link to="">Spaghetti and Meatballs</Link>
+                <ActiveLilnk to="/spaghettiandmeatballs">
+                  Spaghetti and Meatballs
+                </ActiveLilnk>
               </li>
             </ul>
           </div>
@@ -65,19 +71,23 @@ const Footer = () => {
             <h4>About Us</h4>
             <ul>
               <li>
-                <Link to="">Contact Us</Link>
+                <ActiveLilnk to="/contactus">Contact Us</ActiveLilnk>
               </li>
               <li>
-                <Link to="">Privacy Policy</Link>
+                <ActiveLilnk to="/privacypolicy">Privacy Policy</ActiveLilnk>
               </li>
               <li>
-                <Link to="">Terms and Conditions</Link>
+                <ActiveLilnk to="/termsandconditions">
+                  Terms and Conditions
+                </ActiveLilnk>
               </li>
               <li>
-                <Link to="">Site Map</Link>
+                <ActiveLilnk to="/sitemap">Site Map</ActiveLilnk>
               </li>
               <li>
-                <Link to="">Newsletter Signup</Link>
+                <ActiveLilnk to="/Nnewslettersignup">
+                  Newsletter Signup
+                </ActiveLilnk>
               </li>
             </ul>
           </div>
