@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React from "react";
-import "./Card.css";
+
 import { Link } from "react-router-dom";
 import LazyLoad from "react-lazy-load";
 

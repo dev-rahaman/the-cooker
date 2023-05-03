@@ -24,41 +24,21 @@ function CountdownTimer() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        marginTop: "150px",
       }}
     >
-      <h1
-        style={{
-          backgroundColor: "red",
-          margin: "20px",
-          padding: "10px",
-          color: "white",
-          fontSize: "130px",
-        }}
-      >
-        {hours.toString().padStart(2, "0")}:
-      </h1>
-      <h1
-        style={{
-          backgroundColor: "red",
-          margin: "20px",
-          padding: "10px",
-          color: "white",
-          fontSize: "130px",
-        }}
-      >
-        {minutes.toString().padStart(2, "0")}:
-      </h1>
-      <h1
-        style={{
-          backgroundColor: "red",
-          margin: "20px",
-          padding: "10px",
-          color: "white",
-          fontSize: "130px",
-        }}
-      >
-        {seconds.toString().padStart(2, "0")}
-      </h1>
+      <div>
+        <h1 className="clsHanding">Hours</h1>
+        <h1 className="cls">{hours.toString().padStart(2, "0")}:</h1>
+      </div>
+      <div>
+        <h1 className="clsHanding">Minutes</h1>
+        <h1 className="cls">{minutes.toString().padStart(2, "0")}:</h1>
+      </div>
+      <div>
+        <h1 className="clsHanding">Second</h1>
+        <h1 className="cls">{seconds.toString().padStart(2, "0")}</h1>
+      </div>
     </div>
   );
 }
