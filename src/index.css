@@ -4,3 +4,8 @@
   box-sizing: border-box;
   list-style: none;
 }
+.spinierContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

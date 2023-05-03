@@ -8,23 +8,23 @@ const Slider = () => {
   const slides = [
     {
       image: "https://i.postimg.cc/q7QLjcTq/recipe1.jpg",
-      caption: "Caption 1",
+      caption: "Spicy Chicken Curry",
     },
     {
-      image: "https://i.postimg.cc/q7QLjcTq/recipe1.jpg",
-      caption: "Caption 2",
+      image: "Lemon Rosemary Grilled Chicken",
+      caption: "Pan Seared Lemon Garlic Tilapia",
     },
     {
       image: "https://i.postimg.cc/fWVGSycm/recipe6.jpg",
-      caption: "Caption 3",
+      caption: "Homemade Margherita Pizza",
     },
     {
       image: "https://i.postimg.cc/13r21qSh/recipe11.jpg",
-      caption: "Caption 4",
+      caption: "Bacon Wrapped Dates",
     },
     {
       image: "https://i.postimg.cc/q7QLjcTq/recipe1.jpg",
-      caption: "Caption 5",
+      caption: "Buffalo Chicken Dip",
     },
   ];
 

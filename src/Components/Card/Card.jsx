@@ -3,9 +3,9 @@
 import React from "react";
 import "./Card.css";
 import { Link } from "react-router-dom";
+import LazyLoad from "react-lazy-load";
 
 const Card = ({ data }) => {
-  console.log(data);
   const {
     chef_id,
     numbersOfRecipes,
@@ -25,22 +25,32 @@ const Card = ({ data }) => {
         backgroundColor: "#E8ECF0",
         margin: "20px",
         borderRadius: "10px",
-        height: "500px",
+        height: "550px",
         color: "#000",
       }}
     >
       <p>{chef_id}</p>
-      <img
-        style={{
-          width: "280px",
-          height: "250px",
-          padding: "10px",
-          borderRadius: "10px",
+      <LazyLoad
+        height={280}
+        width={240}
+        threshold={0.95}
+        onContentVisible={() => {
+          console.log("loaded!");
         }}
-        src={chefPicture}
-        alt="Chef Picture"
-        className="chef-picture"
-      />
+      >
+        <img
+          style={{
+            width: "280px",
+            height: "240px",
+            padding: "10px",
+            borderRadius: "10px",
+          }}
+          src={chefPicture}
+          alt="Chef Picture"
+          className="chef-picture"
+        />
+      </LazyLoad>
+      ;
       <div style={{ marginLeft: "10px", lineHeight: "27px" }}>
         <h2
           className="chef-name"
