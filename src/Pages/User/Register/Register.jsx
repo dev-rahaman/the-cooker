@@ -1,8 +1,12 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../Provider/AuthProvider";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Register = () => {
+  const { createUser } = useContext(AuthContext);
   const [error, setError] = useState();
   const [accepted, setAccepted] = useState();
   const [showPass, setShowPass] = useState("password");
@@ -35,7 +39,18 @@ const Register = () => {
       return;
     }
 
-    console.log(email, password, photo, firstName, lastName);
+    // console.log(email, password, photo, firstName, lastName);
+
+    createUser(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        toast.success("Thanks your account is crated successfully!");
+      })
+      .catch((error) => {
+        setError(error.message);
+        console.log(error.message);
+      });
   };
 
   const handleShowPass = () => {
@@ -185,6 +200,7 @@ const Register = () => {
           Login
         </Link>
       </div>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };
