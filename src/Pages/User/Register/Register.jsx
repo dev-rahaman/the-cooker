@@ -66,7 +66,7 @@ const Register = () => {
       <form onSubmit={handleSubmit}>
         <div style={{ marginBottom: "20px" }}>
           <label style={{ display: "block", marginBottom: "5px" }}>
-            First Name:
+            First Name<b style={{ color: "red" }}>*</b>
           </label>
           <input
             style={{ width: "100%", padding: "10px", fontSize: "16px" }}
@@ -78,7 +78,7 @@ const Register = () => {
         </div>
         <div style={{ marginBottom: "20px" }}>
           <label style={{ display: "block", marginBottom: "5px" }}>
-            Last Name :
+            Last Name<b style={{ color: "red" }}>*</b>
           </label>
           <input
             style={{ width: "100%", padding: "10px", fontSize: "16px" }}
@@ -90,7 +90,7 @@ const Register = () => {
         </div>
         <div style={{ marginBottom: "20px" }}>
           <label style={{ display: "block", marginBottom: "5px" }}>
-            Photo :
+            Photo<b style={{ color: "red" }}>*</b>
           </label>
           <input
             style={{ width: "100%", padding: "10px", fontSize: "16px" }}
@@ -102,7 +102,7 @@ const Register = () => {
         </div>
         <div style={{ marginBottom: "20px" }}>
           <label style={{ display: "block", marginBottom: "5px" }}>
-            Email:
+            Email<b style={{ color: "red" }}>*</b>
           </label>
           <input
             style={{ width: "100%", padding: "10px", fontSize: "16px" }}
@@ -114,7 +114,7 @@ const Register = () => {
         </div>
         <div style={{ marginBottom: "20px", position: "relative" }}>
           <label style={{ display: "block", marginBottom: "5px" }}>
-            Password:
+            Password<b style={{ color: "red" }}>*</b>
           </label>
           <input
             style={{ width: "100%", padding: "10px", fontSize: "16px" }}
@@ -153,7 +153,7 @@ const Register = () => {
         </div>
         <div style={{ marginBottom: "20px" }}>
           <label style={{ display: "block", marginBottom: "5px" }}>
-            Confirm Password:
+            Confirm Password<b style={{ color: "red" }}>*</b>
           </label>
           <input
             style={{ width: "100%", padding: "10px", fontSize: "16px" }}

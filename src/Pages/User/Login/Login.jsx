@@ -1,8 +1,12 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../Provider/AuthProvider";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
+  const { loginUser, gitHubSignIn, GoogleSignIn } = useContext(AuthContext);
   const [showPass, setShowPass] = useState("password");
   const [error, setError] = useState();
 
@@ -12,7 +16,43 @@ const Login = () => {
     const password = event.target.password.value;
     event.target.reset("");
     setError("");
-    console.log(email, password);
+
+    loginUser(email, password)
+      .then((result) => {
+        const loggedUser = result.user;
+        console.log(loggedUser);
+        toast.success("Login successfully!");
+      })
+      .catch((error) => {
+        setError(error.message);
+        console.log(error.message);
+      });
+  };
+
+  const handleGitHubLogin = () => {
+    gitHubSignIn()
+      .then((result) => {
+        const loggedUser = result.user;
+        console.log(loggedUser);
+        toast.success("Login successfully!");
+      })
+      .catch((error) => {
+        setError(error.message);
+        console.log(error.message);
+      });
+  };
+
+  const handleGoogleSignIn = () => {
+    GoogleSignIn()
+      .then((result) => {
+        const loggedUser = result.user;
+        console.log(loggedUser);
+        toast.success("Login successfully!");
+      })
+      .catch((error) => {
+        setError(error.message);
+        console.log(error.message);
+      });
   };
 
   const handleShowPass = () => {
@@ -96,11 +136,15 @@ const Login = () => {
         </form>
 
         <button
-          style={{ fontSize: "20px", padding: "10px", marginRight: "10px" }}
+          onClick={handleGoogleSignIn}
+          style={{ fontSize: "20px", padding: "10px", cursor: "pointer" }}
         >
           Sign-in with Google
         </button>
-        <button style={{ fontSize: "20px", padding: "10px" }}>
+        <button
+          onClick={handleGitHubLogin}
+          style={{ fontSize: "20px", padding: "10px", cursor: "pointer" }}
+        >
           Sign-in with GitHub
         </button>
 
@@ -117,6 +161,7 @@ const Login = () => {
             Sign Up
           </Link>
         </div>
+        <ToastContainer></ToastContainer>
       </div>
     </>
   );
