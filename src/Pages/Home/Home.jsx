@@ -24,6 +24,9 @@ const Home = () => {
           style={{
             width: "30%",
             marginTop: "20px",
+            backgroundColor: "#efefef",
+            padding: "10px",
+            borderRadius: "10px",
           }}
         >
           <PopularChef></PopularChef>
@@ -32,7 +35,6 @@ const Home = () => {
         </div>
       </div>
       <div style={{ marginLeft: "27px" }}>
-        {" "}
         <Tabs></Tabs>
       </div>
     </div>

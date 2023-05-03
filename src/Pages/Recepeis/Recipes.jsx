@@ -6,11 +6,9 @@ import Recipe from "./recipe/recipe";
 
 const Recipes = ({ loadData }) => {
   const recipe = loadData.recipes;
-
-  // const { _id, banner, recipeName, ratings, cookingMethod, likes } =
-  //   loadData.recipes;
-
-  // console.log(loadData.recipes);
+  // const recipe = loadData;
+  console.log(loadData);
+  // console.log(recipe);
 
   return (
     <div className="chef-card">

@@ -33,7 +33,7 @@ const Login = () => {
     gitHubSignIn()
       .then((result) => {
         const loggedUser = result.user;
-        console.log(loggedUser);
+        // console.log(loggedUser);
         toast.success("Login successfully!");
       })
       .catch((error) => {
@@ -46,7 +46,7 @@ const Login = () => {
     GoogleSignIn()
       .then((result) => {
         const loggedUser = result.user;
-        console.log(loggedUser);
+        // console.log(loggedUser);
         toast.success("Login successfully!");
       })
       .catch((error) => {

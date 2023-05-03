@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const Card = ({ data }) => {
   const {
-    _id,
+    chef_id,
     numbersOfRecipes,
     chefPicture,
     chefName,
@@ -28,8 +28,14 @@ const Card = ({ data }) => {
         color: "#000",
       }}
     >
+      <p>{chef_id}</p>
       <img
-        style={{ width: "280px", padding: "10px", borderRadius: "10px" }}
+        style={{
+          width: "280px",
+          height: "250px",
+          padding: "10px",
+          borderRadius: "10px",
+        }}
         src={chefPicture}
         alt="Chef Picture"
         className="chef-picture"
@@ -60,7 +66,7 @@ const Card = ({ data }) => {
             textDecoration: "none",
           }}
         >
-          <Link to={`chefs/${_id}`} style={{ textDecoration: "none" }}>
+          <Link to={`chefs/${chef_id}`} style={{ textDecoration: "none" }}>
             View Recipes
           </Link>
         </button>

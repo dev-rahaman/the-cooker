@@ -23,7 +23,7 @@ const LatestRecipes = () => {
 
   return (
     <div>
-      <h2 style={{ margin: "20px 0" }}>Latest Chef</h2>
+      <h2 style={{ margin: "20px 0" }}>Latest Chef`s</h2>
       {popular.map((data, idx) => (
         <div key={idx} style={{ margin: "10px", display: "flex" }}>
           <div>

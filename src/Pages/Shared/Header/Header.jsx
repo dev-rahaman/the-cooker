@@ -1,14 +1,24 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import ActiveLilnk from "../../../Components/ActiveLink/ActiveLilnk";
+import { AuthContext } from "../../../Provider/AuthProvider";
 
 const Header = () => {
+  const { user, logOut } = useContext(AuthContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [hover, setHover] = useState(false);
+  const [showDev, setShowDev] = useState();
 
   const handleMenuClick = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {})
+      .then(() => {});
   };
 
   return (
@@ -40,23 +50,59 @@ const Header = () => {
               </ActiveLilnk>
             </li>
 
-            <li className="navbar-item">
-              <ActiveLilnk to="/recipes" className="navbar-link">
-                Profile
-              </ActiveLilnk>
-            </li>
+            {user ? (
+              <>
+                <li className="navbar-item" style={{ position: "relative" }}>
+                  <img
+                    src={user?.photoURL}
+                    alt=""
+                    onMouseOver={() => setHover(user?.displayName)}
+                    onMouseOut={() => setHover("")}
+                    style={{
+                      width: "40px",
+                      height: "40px",
+                      borderRadius: "50px",
+                      cursor: "pointer",
+                    }}
+                  />
+                  {hover && (
+                    <div
+                      style={{
+                        position: "absolute",
+                        backgroundColor: "gray",
+                        color: "#fff",
+                        height: "50px",
+                        borderRadius: "10px",
+                        padding: "10px",
+                        width: "300px",
+                        right: "0",
+                      }}
+                    >
+                      <h2>
+                        <b>Your Name:</b> <small>{hover}</small>
+                      </h2>
+                    </div>
+                  )}
+                </li>
+              </>
+            ) : (
+              <li className="navbar-item">
+                <ActiveLilnk to="/login" className="navbar-link">
+                  Login
+                </ActiveLilnk>
+              </li>
+            )}
 
-            <li className="navbar-item">
-              <ActiveLilnk to="/login" className="navbar-link">
-                Login
-              </ActiveLilnk>
-            </li>
-
-            <li className="navbar-item">
+            {/* <li className="navbar-item">
               <ActiveLilnk to="/register" className="navbar-link">
                 Sign Up
               </ActiveLilnk>
-            </li>
+            </li> */}
+            {/* <span onClick={handleLogOut} className="navbar-item">
+              <button to="/login" className="navbar-link">
+                Log Out
+              </button>
+            </span> */}
           </ul>
         </div>
       </nav>

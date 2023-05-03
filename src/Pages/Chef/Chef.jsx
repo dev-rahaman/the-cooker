@@ -6,6 +6,7 @@ import Recipes from "../Recepeis/Recipes";
 
 const Chef = () => {
   const loadData = useLoaderData();
+  console.log(loadData);
   const {
     _id,
     numbersOfRecipes,

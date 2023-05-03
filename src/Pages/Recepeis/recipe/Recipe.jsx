@@ -43,7 +43,7 @@ const Recipe = ({ nr }) => {
       <div style={{ marginLeft: "10px", lineHeight: "27px" }}>
         <h2
           className="chef-name"
-          style={{ fontSize: "30px", marginBottom: "10px" }}
+          style={{ fontSize: "30px", marginBottom: "10px", height: "50px" }}
         >
           <b>Name:</b> {recipeName}
         </h2>

@@ -24,7 +24,7 @@ const PopularChef = () => {
 
   return (
     <div>
-      <h2>Popular Chef</h2>
+      <h2>Popular Chef`s</h2>
 
       {popular.map((data, idx) => (
         <div key={idx} style={{ margin: "10px", display: "flex" }}>

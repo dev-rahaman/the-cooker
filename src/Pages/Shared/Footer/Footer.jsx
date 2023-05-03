@@ -9,12 +9,16 @@ const Footer = () => {
       <footer>
         <div className="footer-container">
           <div className="footer-column">
-            <h4>Recipes</h4>
+            <h4>The Cooker</h4>
             <p style={{ fontSize: "20px" }}>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam
-              aspernatur quo harum dolores corrupti saepe deserunt iusto aliquid
-              ea nesciunt quibusdam obcaecati architecto inventore atque fuga,
-              odit, molestias iure. Eos.
+              As a chef, you have the power to turn ordinary ingredients into
+              extraordinary dishes. Your creativity, passion, and attention to
+              detail can transform a simple meal into a work of art. With each
+              dish you create, you have the opportunity to delight the senses
+              and bring joy to those who savor your culinary creations. So keep
+              experimenting, keep learning, and keep pushing the boundaries of
+              what`s possible in the kitchen. The world is waiting to taste your
+              next masterpiece!
             </p>
           </div>
           <div className="footer-column">
