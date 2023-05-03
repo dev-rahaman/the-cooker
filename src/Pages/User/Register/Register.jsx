@@ -1,15 +1,30 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { FirebaseError } from "firebase/app";
+import { getAuth, updateProfile } from "firebase/auth";
+import app from "../../../Firebase/Firebase_config";
+const auth = getAuth(app);
+// updateUser()
+//   .then((result) => {
+//     const user = result?.user?.displayName;
+//     console.log(user);
+//   })
+//   .catch((error) => {
+//     setError(error.message);
+//   });
 
 const Register = () => {
-  const { createUser } = useContext(AuthContext);
+  const { user, createUser, updateUser } = useContext(AuthContext);
   const [error, setError] = useState();
   const [accepted, setAccepted] = useState();
   const [showPass, setShowPass] = useState("password");
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -19,6 +34,8 @@ const Register = () => {
     const password = event.target.password.value;
     const confirmPassword = event.target.confirmPassword.value;
     const photo = event.target.photo.value;
+    const fullName = firstName + lastName;
+
     event.target.reset("");
     setError("");
 
@@ -26,7 +43,7 @@ const Register = () => {
       setError("Invalid Confirm Password");
       return;
     }
-    if (password < 6) {
+    if (password.length < 6) {
       setError("password wil be  minimum 6 character");
     } else if (!/(?=.*[A-Z])/.test(password)) {
       setError("password have must be one uppercase");
@@ -35,21 +52,33 @@ const Register = () => {
       setError("password must me have on digit");
       return;
     } else if (!/(?=.*[^\da-zA-Z])/.test(password)) {
-      setError("password must me have on spacial character");
+      setError("password must me have on special  character");
       return;
     }
 
-    // console.log(email, password, photo, firstName, lastName);
-
     createUser(email, password)
       .then((result) => {
-        const user = result.user;
-        console.log(user);
+        const currentUser = result.user;
+        // updateProfile(currentUser);
         toast.success("Thanks your account is crated successfully!");
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         setError(error.message);
         console.log(error.message);
+      });
+
+    updateProfile(auth.currentUser, {
+      displayName: fullName,
+      photoURL: photo,
+    })
+      .then(() => {
+        // Profile updated!
+        // ...
+      })
+      .catch((error) => {
+        // An error occurred
+        // ...
       });
   };
 

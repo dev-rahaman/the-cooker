@@ -46,10 +46,6 @@ const router = createBrowserRouter([
         element: <Register></Register>,
       },
       {
-        path: "/countdownTimer",
-        element: <CountdownTimer></CountdownTimer>,
-      },
-      {
         path: "*",
         element: <Error></Error>,
       },

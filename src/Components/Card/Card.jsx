@@ -35,7 +35,7 @@ const Card = ({ data }) => {
         width={240}
         threshold={0.95}
         onContentVisible={() => {
-          console.log("loaded!");
+          // console.log("loaded!");
         }}
       >
         <img
