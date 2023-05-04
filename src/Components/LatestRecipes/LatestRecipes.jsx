@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const LatestRecipes = () => {
   const [popular, setPopular] = useState([]);
@@ -20,9 +21,9 @@ const LatestRecipes = () => {
             style={{
               margin: "10px",
               display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              height: "150px",
+              // alignItems: "center",
+              // justifyContent: "center",
+              height: "170px",
               backgroundColor: "#94a3b8",
               padding: "10px",
             }}
@@ -31,7 +32,7 @@ const LatestRecipes = () => {
               <img
                 src={data.chefPicture}
                 alt=""
-                style={{ width: "150px", height: "100px" }}
+                style={{ width: "150px", height: "150px" }}
               />
             </div>
             <div style={{ margin: "0 10px" }}>
@@ -53,6 +54,7 @@ const LatestRecipes = () => {
                 style={{
                   display: "flex",
                   alignContent: "center",
+                  marginBottom: "10px",
                 }}
               >
                 <span>
@@ -73,6 +75,18 @@ const LatestRecipes = () => {
                 </span>
                 {data.recipes[0].ratting}
               </p>
+              <Link
+                to={`chefs/${data.chef_id}`}
+                style={{
+                  fontSize: "16px",
+                  padding: "10px",
+                  backgroundColor: "gray",
+                  color: "#fff",
+                  textDecoration: "none",
+                }}
+              >
+                Details{" "}
+              </Link>
             </div>
           </div>
         ))}
