@@ -4,10 +4,8 @@ import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { FirebaseError } from "firebase/app";
+
 import { getAuth, updateProfile } from "firebase/auth";
-import app from "../../../Firebase/Firebase_config";
-const auth = getAuth(app);
 
 const Register = () => {
   const navigate = useNavigate();
@@ -49,30 +47,34 @@ const Register = () => {
       return;
     }
 
-    createUser(email, password)
-      .then((result) => {
-        const currentUser = result.user;
-        // updateProfile(currentUser);
-        toast.success("Thanks your account is crated successfully!");
-        navigate(from, { replace: true });
+    createUser(email, password).then((result) => {
+      const currentUser = result.user;
+      updateProfile(currentUser, {
+        displayName: fullName,
+        photoURL: photo,
       })
-      .catch((error) => {
-        setError(error.message);
-        console.log(error.message);
-      });
+        .then(() => {
+          toast.success("Thanks your account is crated successfully!");
+          navigate(from, { replace: true });
+        })
+        .catch((error) => {
+          setError(error.message);
+          console.log(error.message);
+        });
+    });
 
-    updateProfile(auth.currentUser, {
-      displayName: fullName,
-      photoURL: photo,
-    })
-      .then(() => {
-        // Profile updated!
-        // ...
-      })
-      .catch((error) => {
-        // An error occurred
-        // ...
-      });
+    // updateProfile(auth.currentUser, {
+    //   displayName: fullName,
+    //   photoURL: photo,
+    // })
+    //   .then(() => {
+    //     // Profile updated!
+    //     // ...
+    //   })
+    //   .catch((error) => {
+    //     // An error occurred
+    //     // ...
+    //   });
   };
 
   const handleShowPass = () => {

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./Header.css";
 
 import { AuthContext } from "../../../Provider/AuthProvider";
-import ActiveLilnk from "../../../Components/ActiveLink/ActiveLilnk";
+import ActiveLink from "../../../Components/ActiveLink/ActiveLilnk";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -58,10 +58,10 @@ const Header = () => {
         </button>
         <ul className={`menu__list ${isOpen ? "menu__list--open" : ""}`}>
           <li className="menu__item">
-            <ActiveLilnk to="/">Home</ActiveLilnk>
+            <ActiveLink to="/">Home</ActiveLink>
           </li>
           <li className="menu__item">
-            <ActiveLilnk to="blog">Blog</ActiveLilnk>
+            <ActiveLink to="blog">Blog</ActiveLink>
           </li>
 
           {user ? (
@@ -147,14 +147,14 @@ const Header = () => {
           ) : (
             <>
               <li className="navbar-item">
-                <ActiveLilnk to="/login" classNameName="navbar-link">
+                <ActiveLink to="/login" classNameName="navbar-link">
                   Login
-                </ActiveLilnk>
+                </ActiveLink>
               </li>
               <li className="navbar-item">
-                <ActiveLilnk to="/register" classNameName="navbar-link">
+                <ActiveLink to="/register" classNameName="navbar-link">
                   Sign Up
-                </ActiveLilnk>
+                </ActiveLink>
               </li>
             </>
           )}
@@ -167,9 +167,9 @@ const Header = () => {
 export default Header;
 {
   /* <li classNameName="navbar-item">
-              <ActiveLilnk to="/register" classNameName="navbar-link">
+              <ActiveLink to="/register" classNameName="navbar-link">
                 Sign Up
-              </ActiveLilnk>
+              </ActiveLink>
             </li> */
 }
 {
