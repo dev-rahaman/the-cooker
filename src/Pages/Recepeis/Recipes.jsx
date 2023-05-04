@@ -5,8 +5,6 @@ import Recipe from "./recipe/Recipe";
 
 const Recipes = ({ loadData }) => {
   const recipe = loadData.recipes;
-  // const recipe = loadData;
-  // console.log(recipe);
 
   return (
     <div className="chef-card">

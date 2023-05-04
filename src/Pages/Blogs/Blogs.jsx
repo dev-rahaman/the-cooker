@@ -7,7 +7,7 @@ const ref = React.createRef();
 const Blogs = () => {
   return (
     <>
-      <div ref={ref} style={{ margin: "20px 150px" }}>
+      <div ref={ref} style={{}} className="blogs">
         <h2 className="blogFaq">
           Tell us the differences between uncontrolled and controlled
           components?

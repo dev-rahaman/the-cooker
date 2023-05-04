@@ -13,18 +13,17 @@ const Chef = () => {
     bio,
     description,
     chefLikes,
+    chefBanner,
   } = loadData;
 
   return (
     <>
-      <div
-        style={{
-          margin: "20px",
-          borderRadius: "10px",
-          color: "#000",
-        }}
-      >
-        <img className="chef-picture" src={chefPicture} alt="Chef Picture" />
+      <div className="chef-recipe-card">
+        <img
+          className="chef-picture-chefBanner"
+          src={chefBanner}
+          alt="Chef Picture"
+        />
         <div style={{ marginLeft: "10px", lineHeight: "27px" }}>
           <h2
             className="chef-name"

@@ -19,16 +19,8 @@ const Recipe = ({ nr }) => {
   };
 
   return (
-    <div
-      style={{
-        width: "480px",
-        backgroundColor: "#E8ECF0",
-        margin: "20px",
-        borderRadius: "10px",
-        color: "#000",
-      }}
-    >
-      <img src={banner} alt="Chef Picture" className="chef-picture" />
+    <div className="chef-recipe-four-card">
+      <img src={banner} alt="Chef Picture" className="chef-recipe-banner" />
 
       <div style={{ marginLeft: "10px", lineHeight: "27px" }}>
         <h2
