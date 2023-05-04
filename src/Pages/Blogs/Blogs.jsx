@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
 import React from "react";
-import Pdf from "react-to-pdf";
 const ref = React.createRef();
 import { PDFDownloadLink } from "@react-pdf/renderer";
 import PDFFILE from "../../Components/PDFFILE/PDFFILE.JSX";
@@ -101,19 +100,7 @@ const Blogs = () => {
           testability of your code.
         </p>
       </div>
-      {/* <div style={{ textAlign: "center", marginBottom: "50px" }}>
-        <Pdf targetRef={ref} filename="code-example.pdf">
-          {({ toPdf }) => (
-            <button
-              onClick={toPdf}
-              style={{ padding: "20px", fontSize: "20px", cursor: "pointer" }}
-            >
-              Download With PDF
-            </button>
-          )}
-        </Pdf>
-      </div> */}
-      {/* 2 */}
+
       <div>
         <div style={{ textAlign: "center", marginBottom: "50px" }}>
           <PDFDownloadLink document={<PDFFILE />} filename="FORM">
