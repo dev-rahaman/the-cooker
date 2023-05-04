@@ -20,9 +20,6 @@ function CountdownTimer() {
 
   return (
     <div>
-      <h2 style={{ marginTop: "150px", textAlign: "center" }}>
-        Additional Section 2
-      </h2>{" "}
       <div
         style={{
           display: "flex",

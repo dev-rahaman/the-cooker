@@ -24,17 +24,7 @@ const Chef = () => {
           color: "#000",
         }}
       >
-        <img
-          style={{
-            width: "900px",
-            padding: "10px",
-            borderRadius: "10px",
-            height: "400px",
-          }}
-          src={chefPicture}
-          alt="Chef Picture"
-          className="chef-picture"
-        />
+        <img className="chef-picture" src={chefPicture} alt="Chef Picture" />
         <div style={{ marginLeft: "10px", lineHeight: "27px" }}>
           <h2
             className="chef-name"

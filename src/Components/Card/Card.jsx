@@ -12,24 +12,11 @@ const Card = ({ data }) => {
     chefPicture,
     chefName,
     yearsOfExperience,
-    bio,
-    address,
-    description,
-    chefBanner,
     chefLikes,
   } = data;
   return (
-    <div
-      style={{
-        width: "280px",
-        backgroundColor: "#E8ECF0",
-        margin: "20px",
-        borderRadius: "10px",
-        height: "550px",
-        color: "#000",
-      }}
-    >
-      <p>{chef_id}</p>
+    <div className="cardRRR">
+      {/* <p>{chef_id}</p> */}
       <LazyLoad
         height={280}
         width={240}
@@ -38,19 +25,9 @@ const Card = ({ data }) => {
           // console.log("loaded!");
         }}
       >
-        <img
-          style={{
-            width: "280px",
-            height: "240px",
-            padding: "10px",
-            borderRadius: "10px",
-          }}
-          src={chefPicture}
-          alt="Chef Picture"
-          className="chef-picture"
-        />
+        <img className="chef-picture" src={chefPicture} alt="Chef Picture" />
       </LazyLoad>
-      ;
+
       <div style={{ marginLeft: "10px", lineHeight: "27px" }}>
         <h2
           className="chef-name"

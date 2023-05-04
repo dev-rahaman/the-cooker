@@ -47,17 +47,18 @@ const Slider = () => {
     <>
       <div className="slider">
         <div className="slider-image-container">
-          {slides.map((slide, index) => (
-            <div
-              key={index}
-              className={`slider-image ${
-                currentSlide === index ? "active" : ""
-              }`}
-              style={{ backgroundImage: `url(${slide.image})` }}
-            >
-              <div className="slider-caption">{slide.caption}</div>
-            </div>
-          ))}
+          {slides &&
+            slides.map((slide, index) => (
+              <div
+                key={index}
+                className={`slider-image ${
+                  currentSlide === index ? "active" : ""
+                }`}
+                style={{ backgroundImage: `url(${slide.image})` }}
+              >
+                <div className="slider-caption">{slide.caption}</div>
+              </div>
+            ))}
         </div>
         <div className="slider-controls">
           <button className="slider-control" onClick={prevSlide}>

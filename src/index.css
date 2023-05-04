@@ -76,10 +76,3 @@ a.active {
   flex-wrap: wrap;
 }
 /* card end  */
-
-/* Home Right Side bar */
-.bgcOnHomeRightSide {
-  margin-top: 20px;
-  padding: 10px;
-  border-radius: 10px;
-}

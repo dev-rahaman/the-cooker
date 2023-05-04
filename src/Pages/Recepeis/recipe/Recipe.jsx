@@ -13,7 +13,7 @@ const Recipe = ({ nr }) => {
     nr;
 
   const handleFavoriteBtn = () => {
-    toast.success(`Welcome, ${recipeName}!`);
+    toast.success(`Welcome, ${recipeName}! is my favorite `);
     setDis(true);
     setBgColor("#d39696");
   };
@@ -28,17 +28,7 @@ const Recipe = ({ nr }) => {
         color: "#000",
       }}
     >
-      <img
-        style={{
-          width: "480px",
-          height: "200px",
-          padding: "10px",
-          borderRadius: "10px",
-        }}
-        src={banner}
-        alt="Chef Picture"
-        className="chef-picture"
-      />
+      <img src={banner} alt="Chef Picture" className="chef-picture" />
 
       <div style={{ marginLeft: "10px", lineHeight: "27px" }}>
         <h2
@@ -48,19 +38,18 @@ const Recipe = ({ nr }) => {
           <b>Recipe Name:</b> {recipeName}
         </h2>
 
-        <p className="likes" style={{ fontSize: "20px" }}>
-          <b>Likes:</b> {chefLikes}
-        </p>
-
         <span className="num-recipes" style={{ fontSize: "20px" }}>
           <b>Ingredients: </b>
-          {ingredients.map((r, idx) => (
-            <div key={idx}>
-              <ul>
-                <li> {r.name}</li>
-              </ul>
-            </div>
-          ))}
+          {ingredients &&
+            ingredients.map((r, idx) => (
+              <div key={idx}>
+                <ul>
+                  <li>
+                    {idx + 1} {r.name}
+                  </li>
+                </ul>
+              </div>
+            ))}
         </span>
 
         <span className="num-recipes" style={{ fontSize: "20px" }}>
