@@ -9,7 +9,6 @@ import Error from "../Pages/Error/Error";
 import Chef from "../Pages/Chef/Chef";
 import Tabs from "../Components/Tabs/Tabs";
 import PrivateRoutes from "./PrivateRoutes";
-import CountdownTimer from "../Components/CountdownTimer/CountdownTimer";
 
 const router = createBrowserRouter([
   {

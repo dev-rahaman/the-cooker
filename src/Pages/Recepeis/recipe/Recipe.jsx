@@ -9,8 +9,7 @@ const Recipe = ({ nr }) => {
   const [dis, setDis] = useState(false);
   const [bgColor, setBgColor] = useState("none");
 
-  const { banner, recipeName, chefLikes, ingredients, ratting, cookingMethod } =
-    nr;
+  const { banner, recipeName, ingredients, ratting, cookingMethod } = nr;
 
   const handleFavoriteBtn = () => {
     toast.success(`Welcome, ${recipeName}! is my favorite `);

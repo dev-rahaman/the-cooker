@@ -12,7 +12,6 @@ import "./Home.css";
 
 const Home = () => {
   const loadData = useLoaderData();
-  const [loading, setLoading] = useState(false);
 
   return (
     <div>

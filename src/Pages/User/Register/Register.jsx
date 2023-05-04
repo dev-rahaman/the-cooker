@@ -5,7 +5,7 @@ import { AuthContext } from "../../../Provider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import { getAuth, updateProfile } from "firebase/auth";
+import { updateProfile } from "firebase/auth";
 
 const Register = () => {
   const navigate = useNavigate();

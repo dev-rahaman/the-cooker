@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React from "react";
-
 import { Link } from "react-router-dom";
 import LazyLoad from "react-lazy-load";
 
@@ -16,14 +15,11 @@ const Card = ({ data }) => {
   } = data;
   return (
     <div className="cardRRR">
-      {/* <p>{chef_id}</p> */}
       <LazyLoad
         height={280}
         width={240}
         threshold={0.95}
-        onContentVisible={() => {
-          // console.log("loaded!");
-        }}
+        onContentVisible={() => {}}
       >
         <img className="chef-picture" src={chefPicture} alt="Chef Picture" />
       </LazyLoad>

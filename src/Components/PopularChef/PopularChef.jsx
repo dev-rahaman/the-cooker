@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react";
 
 const PopularChef = () => {
-  const [lodging, setLodging] = useState(false);
   const [popular, setPopular] = useState([]);
 
   useEffect(() => {

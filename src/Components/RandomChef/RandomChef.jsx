@@ -10,17 +10,6 @@ const RandomChef = () => {
       .then((data) => setPopular(data));
   }, []);
 
-  const {
-    _id,
-    numbersOfRecipes,
-    chefName,
-    likes,
-    chefBanner,
-    ranking,
-    chefPicture,
-    ratting,
-  } = popular;
-
   return (
     <div>
       <h2 style={{ margin: "20px 0" }}>Random Chef`s</h2>

@@ -24,19 +24,6 @@ const Login = () => {
     event.target.reset("");
     setError("");
 
-    // if (password.length < 6) {
-    //   setError("password wil be  minimum 6 character");
-    // } else if (!/(?=.*[A-Z])/.test(password)) {
-    //   setError("password have must be one uppercase");
-    //   return;
-    // } else if (!/(?=.*\d)/.test(password)) {
-    //   setError("password must me have on digit");
-    //   return;
-    // } else if (!/(?=.*[^\da-zA-Z])/.test(password)) {
-    //   setError("password must me have on special  character");
-    //   return;
-    // }
-
     loginUser(email, password)
       .then((result) => {
         const loggedUser = result.user;

@@ -7,7 +7,6 @@ const Chef = () => {
   const loadData = useLoaderData();
   const {
     numbersOfRecipes,
-    chefPicture,
     chefName,
     yearsOfExperience,
     bio,

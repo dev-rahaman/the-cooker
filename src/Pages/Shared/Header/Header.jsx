@@ -15,7 +15,6 @@ const Header = () => {
   const { user, logOut } = useContext(AuthContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hover, setHover] = useState(false);
-  const [showDev, setShowDev] = useState();
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -66,15 +65,11 @@ const Header = () => {
 
           {user ? (
             <>
-              <li
-                className="navbar-item positionTwo"
-                // style={{ position: "relative" }}
-              >
+              <li className="navbar-item positionTwo">
                 <img
                   src={user?.photoURL}
                   alt=""
                   onMouseOver={() => setHover(user?.displayName)}
-                  // onMouseOut={() => setHover("")}
                   style={{
                     width: "40px",
                     height: "40px",
@@ -83,20 +78,7 @@ const Header = () => {
                   }}
                 />
                 {hover && (
-                  <div
-                    ref={containerRef}
-                    className="navbar-item positionONe"
-                    // style={{
-                    //   position: "absolute",
-                    //   backgroundColor: "gray",
-                    //   color: "#fff",
-                    //   borderRadius: "10px",
-                    //   padding: "10px",
-                    //   width: "350px",
-                    //   right: "0",
-                    //   zIndex: "999",
-                    // }}
-                  >
+                  <div ref={containerRef} className="navbar-item positionONe">
                     <h2 style={{ marginBottom: "20px" }}>
                       <b>Your Name:</b> <small>{hover}</small>
                     </h2>
@@ -165,17 +147,3 @@ const Header = () => {
 };
 
 export default Header;
-{
-  /* <li classNameName="navbar-item">
-              <ActiveLink to="/register" classNameName="navbar-link">
-                Sign Up
-              </ActiveLink>
-            </li> */
-}
-{
-  /* <span onClick={handleLogOut} classNameName="navbar-item">
-              <button to="/login" classNameName="navbar-link">
-                Log Out
-              </button>
-            </span> */
-}
