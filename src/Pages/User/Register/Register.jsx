@@ -35,15 +35,15 @@ const Register = () => {
       return;
     }
     if (password.length < 6) {
-      setError("password wil be  minimum 6 character");
+      setError("password will be  minimum 6 character");
     } else if (!/(?=.*[A-Z])/.test(password)) {
       setError("password have must be one uppercase");
       return;
     } else if (!/(?=.*\d)/.test(password)) {
-      setError("password must me have on digit");
+      setError("password have must be a digit");
       return;
     } else if (!/(?=.*[^\da-zA-Z])/.test(password)) {
-      setError("password must me have on special  character");
+      setError("password  have must be a special character");
       return;
     }
 
@@ -62,19 +62,6 @@ const Register = () => {
           console.log(error.message);
         });
     });
-
-    // updateProfile(auth.currentUser, {
-    //   displayName: fullName,
-    //   photoURL: photo,
-    // })
-    //   .then(() => {
-    //     // Profile updated!
-    //     // ...
-    //   })
-    //   .catch((error) => {
-    //     // An error occurred
-    //     // ...
-    //   });
   };
 
   const handleShowPass = () => {
