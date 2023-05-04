@@ -4,6 +4,8 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import google from "../../../../public/google.png";
+import github from "../../../../public/github.png";
 
 const Login = () => {
   const { loginUser, gitHubSignIn, GoogleSignIn } = useContext(AuthContext);
@@ -81,7 +83,7 @@ const Login = () => {
     <>
       <div
         style={{
-          maxWidth: "500px",
+          maxWidth: "550px",
           margin: "0 auto",
           padding: "80px 0",
         }}
@@ -118,7 +120,7 @@ const Login = () => {
                 style={{
                   width: "25px",
                   position: "absolute",
-                  left: "460px",
+                  left: "500px",
                   bottom: "5px",
                 }}
               >
@@ -153,18 +155,54 @@ const Login = () => {
           </button>
         </form>
 
-        <button
-          onClick={handleGoogleSignIn}
-          style={{ fontSize: "20px", padding: "10px", cursor: "pointer" }}
-        >
-          Sign-in with Google
-        </button>
-        <button
-          onClick={handleGitHubLogin}
-          style={{ fontSize: "20px", padding: "10px", cursor: "pointer" }}
-        >
-          Sign-in with GitHub
-        </button>
+        <div style={{ display: "flex" }}>
+          {" "}
+          <button
+            onClick={handleGoogleSignIn}
+            style={{
+              fontSize: "20px",
+              padding: "15px",
+              cursor: "pointer",
+              backgroundColor: "#3F81EC",
+              color: "#fff",
+              border: "none",
+              width: "250px",
+              height: "50px",
+              display: "flex",
+              alignItems: "center",
+              marginRight: "30px",
+            }}
+          >
+            <img
+              src={google}
+              alt=""
+              style={{ width: "40px", height: "40px" }}
+            />
+            <p style={{ marginLeft: "5px" }}> Sign-in with Google</p>
+          </button>
+          <button
+            onClick={handleGitHubLogin}
+            style={{
+              fontSize: "20px",
+              padding: "15px",
+              cursor: "pointer",
+              backgroundColor: "#23282c",
+              color: "#fff",
+              border: "none",
+              width: "250px",
+              height: "50px",
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            <img
+              src={github}
+              alt=""
+              style={{ width: "40px", height: "40px" }}
+            />
+            <p style={{ marginLeft: "5px" }}> Sign-in with github</p>
+          </button>
+        </div>
 
         <div style={{ marginTop: "10px" }}>
           Don`t Have An Account?{" "}

@@ -24,7 +24,7 @@ const Footer = () => {
             <h4>Ingredients</h4>
             <div>
               <ul>
-                <Link to="https://the-cooker-52354.web.app/chefs/1">
+                <ActiveLink to="https://the-cooker-52354.web.app/chefs/1">
                   <li
                     style={{
                       display: "flex",
@@ -51,8 +51,8 @@ const Footer = () => {
                       </p>
                     </div>
                   </li>
-                </Link>
-                <Link to="https://the-cooker-52354.web.app/chefs/2">
+                </ActiveLink>
+                <ActiveLink to="https://the-cooker-52354.web.app/chefs/2">
                   <li
                     style={{
                       display: "flex",
@@ -75,14 +75,14 @@ const Footer = () => {
                       </p>
                     </div>
                   </li>
-                </Link>
+                </ActiveLink>
               </ul>
             </div>
           </div>
           <div className="footer-column">
             <h4>Popular</h4>
             <div>
-              <Link to="https://the-cooker-52354.web.app/chefs/3">
+              <ActiveLink to="https://the-cooker-52354.web.app/chefs/3">
                 <li
                   style={{
                     display: "flex",
@@ -105,8 +105,8 @@ const Footer = () => {
                     </p>
                   </div>
                 </li>
-              </Link>
-              <Link to="https://the-cooker-52354.web.app/chefs/4">
+              </ActiveLink>
+              <ActiveLink to="https://the-cooker-52354.web.app/chefs/4">
                 <li
                   style={{
                     display: "flex",
@@ -129,13 +129,13 @@ const Footer = () => {
                     </p>
                   </div>
                 </li>
-              </Link>
+              </ActiveLink>
             </div>
           </div>
           <div className="footer-column">
             <h4>About Us</h4>
             <div>
-              <Link to="https://the-cooker-52354.web.app/chefs/5">
+              <ActiveLink to="https://the-cooker-52354.web.app/chefs/5">
                 <li
                   style={{
                     display: "flex",
@@ -158,8 +158,8 @@ const Footer = () => {
                     </p>
                   </div>
                 </li>
-              </Link>
-              <Link to="https://the-cooker-52354.web.app/chefs/6">
+              </ActiveLink>
+              <ActiveLink to="https://the-cooker-52354.web.app/chefs/6">
                 <li
                   style={{
                     display: "flex",
@@ -182,7 +182,7 @@ const Footer = () => {
                     </p>
                   </div>
                 </li>
-              </Link>
+              </ActiveLink>
             </div>
           </div>
         </div>
