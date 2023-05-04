@@ -3,6 +3,8 @@
 import React from "react";
 import Pdf from "react-to-pdf";
 const ref = React.createRef();
+import { PDFDownloadLink } from "@react-pdf/renderer";
+import PDFFILE from "../../Components/PDFFILE/PDFFILE.JSX";
 
 const Blogs = () => {
   return (
@@ -99,7 +101,7 @@ const Blogs = () => {
           testability of your code.
         </p>
       </div>
-      <div style={{ textAlign: "center", marginBottom: "50px" }}>
+      {/* <div style={{ textAlign: "center", marginBottom: "50px" }}>
         <Pdf targetRef={ref} filename="code-example.pdf">
           {({ toPdf }) => (
             <button
@@ -110,6 +112,29 @@ const Blogs = () => {
             </button>
           )}
         </Pdf>
+      </div> */}
+      {/* 2 */}
+      <div>
+        <div style={{ textAlign: "center", marginBottom: "50px" }}>
+          <PDFDownloadLink document={<PDFFILE />} filename="FORM">
+            {({ loading }) =>
+              loading ? (
+                <button>Loading Document...</button>
+              ) : (
+                <button
+                  style={{
+                    padding: "20px",
+                    fontSize: "20px",
+                    cursor: "pointer",
+                  }}
+                >
+                  Download with PDF
+                </button>
+              )
+            }
+          </PDFDownloadLink>
+          {/* <PDFFile /> */}
+        </div>
       </div>
     </>
   );

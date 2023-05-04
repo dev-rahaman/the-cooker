@@ -9,6 +9,7 @@ import Error from "../Pages/Error/Error";
 import Chef from "../Pages/Chef/Chef";
 import Tabs from "../Components/Tabs/Tabs";
 import PrivateRoutes from "./PrivateRoutes";
+import RDF from "../Pages/Blogs/RDF";
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login></Login>,
+      },
+      {
+        path: "/rdf",
+        element: <RDF></RDF>,
       },
       {
         path: "/register",
