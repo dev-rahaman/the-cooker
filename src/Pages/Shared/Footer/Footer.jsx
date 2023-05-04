@@ -21,7 +21,7 @@ const Footer = () => {
             </p>
           </div>
           <div className="footer-column">
-            <h4>Ingredients</h4>
+            <h4>Barger</h4>
             <div>
               <ul>
                 <ActiveLink to="https://the-cooker-52354.web.app/chefs/1">
@@ -43,11 +43,10 @@ const Footer = () => {
                     />
                     <div style={{ margin: "10px" }}>
                       {" "}
-                      <h5 style={{ fontSize: "16px" }}>
-                        As a chef, you have the
-                      </h5>
+                      <h5 style={{ fontSize: "16px" }}>Spicy Chicken Curry</h5>
                       <p>
-                        Quis sed mid elit, risus aliquet placerat. Pid et, vel..
+                        Heat the olive oil in a large skillet over medium-high
+                        heat...
                       </p>
                     </div>
                   </li>
@@ -68,10 +67,10 @@ const Footer = () => {
                     <div style={{ margin: "10px" }}>
                       {" "}
                       <h5 style={{ fontSize: "16px" }}>
-                        As a chef, you have the
+                        Lemon Rosemary Grilled Chicken
                       </h5>
                       <p>
-                        Quis sed mid elit, risus aliquet placerat. Pid et, vel..
+                        Remove the chicken from the skillet and set aside...
                       </p>
                     </div>
                   </li>
@@ -80,7 +79,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="footer-column">
-            <h4>Popular</h4>
+            <h4>Cocktail</h4>
             <div>
               <ActiveLink to="https://the-cooker-52354.web.app/chefs/3">
                 <li
@@ -98,7 +97,7 @@ const Footer = () => {
                   <div style={{ margin: "10px" }}>
                     {" "}
                     <h5 style={{ fontSize: "16px" }}>
-                      As a chef, you have the
+                      Homemade Margherita Pizza
                     </h5>
                     <p>
                       Quis sed mid elit, risus aliquet placerat. Pid et, vel..
@@ -121,11 +120,10 @@ const Footer = () => {
                   />
                   <div style={{ margin: "10px" }}>
                     {" "}
-                    <h5 style={{ fontSize: "16px" }}>
-                      As a chef, you have the
-                    </h5>
+                    <h5 style={{ fontSize: "16px" }}>Bacon Wrapped Dates</h5>
                     <p>
-                      Quis sed mid elit, risus aliquet placerat. Pid et, vel..
+                      Add the onion, garlic, and ginger to the skillet and cook
+                      ...
                     </p>
                   </div>
                 </li>
@@ -133,7 +131,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="footer-column">
-            <h4>About Us</h4>
+            <h4>Copy Milk</h4>
             <div>
               <ActiveLink to="https://the-cooker-52354.web.app/chefs/5">
                 <li
@@ -151,10 +149,11 @@ const Footer = () => {
                   <div style={{ margin: "10px" }}>
                     {" "}
                     <h5 style={{ fontSize: "16px" }}>
-                      As a chef, you have the
+                      Italian Sausage and Vegetable Skillet
                     </h5>
                     <p>
-                      Quis sed mid elit, risus aliquet placerat. Pid et, vel..
+                      Add the onion, garlic, and ginger to the skillet and
+                      cook..
                     </p>
                   </div>
                 </li>
