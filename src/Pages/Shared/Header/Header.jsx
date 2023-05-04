@@ -145,11 +145,18 @@ const Header = () => {
                 </li>
               </>
             ) : (
-              <li className="navbar-item">
-                <ActiveLilnk to="/login" className="navbar-link">
-                  Login
-                </ActiveLilnk>
-              </li>
+              <>
+                <li className="navbar-item">
+                  <ActiveLilnk to="/login" className="navbar-link">
+                    Login
+                  </ActiveLilnk>
+                </li>
+                <li className="navbar-item">
+                  <ActiveLilnk to="/register" className="navbar-link">
+                    Sign Up
+                  </ActiveLilnk>
+                </li>
+              </>
             )}
 
             {/* <li className="navbar-item">

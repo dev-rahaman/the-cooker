@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
-import "./Chef.css";
 import { useLoaderData } from "react-router-dom";
 import Recipes from "../Recepeis/Recipes";
 

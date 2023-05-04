@@ -7,8 +7,10 @@ import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   const { loginUser, gitHubSignIn, GoogleSignIn } = useContext(AuthContext);
+
   const [showPass, setShowPass] = useState("password");
   const [error, setError] = useState();
+
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
@@ -20,10 +22,22 @@ const Login = () => {
     event.target.reset("");
     setError("");
 
+    // if (password.length < 6) {
+    //   setError("password wil be  minimum 6 character");
+    // } else if (!/(?=.*[A-Z])/.test(password)) {
+    //   setError("password have must be one uppercase");
+    //   return;
+    // } else if (!/(?=.*\d)/.test(password)) {
+    //   setError("password must me have on digit");
+    //   return;
+    // } else if (!/(?=.*[^\da-zA-Z])/.test(password)) {
+    //   setError("password must me have on special  character");
+    //   return;
+    // }
+
     loginUser(email, password)
       .then((result) => {
         const loggedUser = result.user;
-        console.log(loggedUser);
         toast.success("Login successfully!");
         navigate(from, { replace: true });
       })
@@ -37,7 +51,6 @@ const Login = () => {
     gitHubSignIn()
       .then((result) => {
         const loggedUser = result.user;
-        // console.log(loggedUser);
         toast.success("Login successfully!");
         navigate(from, { replace: true });
       })
@@ -51,8 +64,6 @@ const Login = () => {
     GoogleSignIn()
       .then((result) => {
         const loggedUser = result.user;
-        // console.log(loggedUser);
-        setError(error.message);
         toast.success("Login successfully!");
         navigate(from, { replace: true });
       })

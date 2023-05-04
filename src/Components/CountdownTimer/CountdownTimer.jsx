@@ -19,25 +19,29 @@ function CountdownTimer() {
   const seconds = timeLeft % 60;
 
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        marginTop: "150px",
-      }}
-    >
-      <div>
-        <h1 className="clsHanding">Hours</h1>
-        <h1 className="cls">{hours.toString().padStart(2, "0")}:</h1>
-      </div>
-      <div>
-        <h1 className="clsHanding">Minutes</h1>
-        <h1 className="cls">{minutes.toString().padStart(2, "0")}:</h1>
-      </div>
-      <div>
-        <h1 className="clsHanding">Second</h1>
-        <h1 className="cls">{seconds.toString().padStart(2, "0")}</h1>
+    <div>
+      <h2 style={{ marginTop: "150px", textAlign: "center" }}>
+        Additional Section 2
+      </h2>{" "}
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <div>
+          <h1 className="clsHanding">Hours</h1>
+          <h1 className="cls">{hours.toString().padStart(2, "0")}:</h1>
+        </div>
+        <div>
+          <h1 className="clsHanding">Minutes</h1>
+          <h1 className="cls">{minutes.toString().padStart(2, "0")}:</h1>
+        </div>
+        <div>
+          <h1 className="clsHanding">Second</h1>
+          <h1 className="cls">{seconds.toString().padStart(2, "0")}</h1>
+        </div>
       </div>
     </div>
   );

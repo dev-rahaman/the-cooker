@@ -22,18 +22,33 @@ const Home = () => {
             <Card data={data} key={idx}></Card>
           ))}
         </div>
+
         <div
           style={{
             width: "30%",
-            marginTop: "20px",
-            backgroundColor: "#efefef",
-            padding: "10px",
-            borderRadius: "10px",
           }}
         >
-          <PopularChef></PopularChef>
-          <LatestRecipes></LatestRecipes>
-          <RandomChef></RandomChef>
+          <div
+            style={{ backgroundColor: "#cbd5e1" }}
+            className="bgcOnHomeRightSide"
+          >
+            {" "}
+            <PopularChef></PopularChef>
+          </div>
+          <div
+            style={{ backgroundColor: "#64748b" }}
+            className="bgcOnHomeRightSide"
+          >
+            {" "}
+            <LatestRecipes></LatestRecipes>
+          </div>
+          <div
+            style={{ backgroundColor: "#cbd5e1" }}
+            className="bgcOnHomeRightSide"
+          >
+            {" "}
+            <RandomChef></RandomChef>
+          </div>
         </div>
       </div>
       <div style={{ display: "flex", margin: "50px 0" }}>

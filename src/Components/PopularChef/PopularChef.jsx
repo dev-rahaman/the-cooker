@@ -15,15 +15,29 @@ const PopularChef = () => {
     <div>
       <h2>Popular Chef`s</h2>
       {popular.map((data, idx) => (
-        <div key={idx} style={{ margin: "10px", display: "flex" }}>
+        <div
+          key={idx}
+          style={{
+            margin: "10px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            height: "150px",
+            backgroundColor: "#94a3b8",
+            padding: "10px",
+          }}
+        >
           <div>
-            <img src={data.chefPicture} alt="" style={{ width: "150px" }} />
+            <img
+              src={data.chefPicture}
+              alt=""
+              style={{ width: "150px", height: "100px" }}
+            />
           </div>
-          <div style={{ margin: "10px" }}>
-            <h2>Name: {data.chefName}</h2>
+          <div style={{ margin: "0 10px", height: "100px" }}>
+            <h2>{data.chefName}</h2>
             <p
               style={{
-                marginTop: "10px",
                 display: "flex",
                 alignContent: "center",
               }}
@@ -37,7 +51,6 @@ const PopularChef = () => {
             </p>
             <p
               style={{
-                marginTop: "10px",
                 display: "flex",
                 alignContent: "center",
               }}

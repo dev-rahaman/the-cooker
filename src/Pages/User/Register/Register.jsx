@@ -8,23 +8,16 @@ import { FirebaseError } from "firebase/app";
 import { getAuth, updateProfile } from "firebase/auth";
 import app from "../../../Firebase/Firebase_config";
 const auth = getAuth(app);
-// updateUser()
-//   .then((result) => {
-//     const user = result?.user?.displayName;
-//     console.log(user);
-//   })
-//   .catch((error) => {
-//     setError(error.message);
-//   });
 
 const Register = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+
   const { user, createUser, updateUser } = useContext(AuthContext);
   const [error, setError] = useState();
   const [accepted, setAccepted] = useState();
   const [showPass, setShowPass] = useState("password");
-  const navigate = useNavigate();
-  const location = useLocation();
-  const from = location.state?.from?.pathname || "/";
 
   const handleSubmit = (event) => {
     event.preventDefault();
