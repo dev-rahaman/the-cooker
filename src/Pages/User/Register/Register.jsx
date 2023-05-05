@@ -73,7 +73,7 @@ const Register = () => {
   };
 
   return (
-    <div style={{ maxWidth: "500px", margin: "0 auto", padding: "80px 0" }}>
+    <div className="registerFormContainer">
       <form onSubmit={handleSubmit}>
         <div style={{ marginBottom: "20px" }}>
           <label style={{ display: "block", marginBottom: "5px" }}>

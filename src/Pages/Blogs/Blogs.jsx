@@ -8,7 +8,7 @@ import PDFFILE from "../../Components/PDFFILE/PDFFILE.JSX";
 const Blogs = () => {
   return (
     <>
-      <div ref={ref} style={{}} className="blogs">
+      <div ref={ref} className="blogs">
         <div className="name">
           <h2 className="blogFaq">
             Tell us the differences between uncontrolled and controlled
@@ -124,6 +124,9 @@ const Blogs = () => {
                     padding: "20px",
                     fontSize: "20px",
                     cursor: "pointer",
+                    borderRadius: "10px",
+                    border: "none",
+                    backgroundColor: "#F9D72D",
                   }}
                 >
                   Download with PDF

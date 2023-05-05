@@ -68,13 +68,7 @@ const Login = () => {
 
   return (
     <>
-      <div
-        style={{
-          maxWidth: "550px",
-          margin: "0 auto",
-          padding: "80px 0",
-        }}
-      >
+      <div className="loginContainer">
         <form onSubmit={handleLoginSubmit}>
           <div style={{ marginBottom: "20px" }}>
             <label style={{ display: "block", marginBottom: "5px" }}>
@@ -87,7 +81,7 @@ const Login = () => {
               required
             />
           </div>
-          <div style={{ marginBottom: "20px", position: "relative" }}>
+          <div className="PositionLoginPagesOne">
             <label style={{ display: "block", marginBottom: "5px" }}>
               Password:
             </label>
@@ -104,12 +98,7 @@ const Login = () => {
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                style={{
-                  width: "25px",
-                  position: "absolute",
-                  left: "500px",
-                  bottom: "5px",
-                }}
+                className="showIcon"
               >
                 <path
                   strokeLinecap="round"
@@ -144,22 +133,7 @@ const Login = () => {
 
         <div style={{ display: "flex" }}>
           {" "}
-          <button
-            onClick={handleGoogleSignIn}
-            style={{
-              fontSize: "20px",
-              padding: "15px",
-              cursor: "pointer",
-              backgroundColor: "#3F81EC",
-              color: "#fff",
-              border: "none",
-              width: "250px",
-              height: "50px",
-              display: "flex",
-              alignItems: "center",
-              marginRight: "30px",
-            }}
-          >
+          <button onClick={handleGoogleSignIn} className="clickGoogleSignIn">
             <img
               src={google}
               alt=""
@@ -167,21 +141,7 @@ const Login = () => {
             />
             <p style={{ marginLeft: "5px" }}> Sign-in with Google</p>
           </button>
-          <button
-            onClick={handleGitHubLogin}
-            style={{
-              fontSize: "20px",
-              padding: "15px",
-              cursor: "pointer",
-              backgroundColor: "#23282c",
-              color: "#fff",
-              border: "none",
-              width: "250px",
-              height: "50px",
-              display: "flex",
-              alignItems: "center",
-            }}
-          >
+          <button onClick={handleGitHubLogin} className="clickGoogleSignIn">
             <img
               src={github}
               alt=""
