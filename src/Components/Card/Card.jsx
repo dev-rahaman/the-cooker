@@ -39,7 +39,7 @@ const Card = ({ data }) => {
         </p>
 
         <p className="likes" style={{ fontSize: "20px" }}>
-          <p className="likes" style={{ fontSize: "20px" }}>
+          <span className="likes" style={{ fontSize: "20px" }}>
             <span
               style={{
                 display: "flex",
@@ -67,7 +67,7 @@ const Card = ({ data }) => {
               </svg>
               <b></b> {city}
             </span>
-          </p>
+          </span>
         </p>
 
         <div
@@ -98,7 +98,10 @@ const Card = ({ data }) => {
           </button>
 
           <p className="likes" style={{ fontSize: "20px" }}>
-            <p className="likes" style={{ fontSize: "20px" }}>
+            <span
+              className="likes"
+              style={{ fontSize: "20px", display: "block" }}
+            >
               <span
                 style={{
                   display: "flex",
@@ -121,7 +124,7 @@ const Card = ({ data }) => {
                 </svg>
                 <b></b> {chefLikes}
               </span>
-            </p>
+            </span>
           </p>
         </div>
       </div>
