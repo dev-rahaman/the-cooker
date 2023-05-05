@@ -54,7 +54,7 @@ const Register = () => {
         photoURL: photo,
       })
         .then(() => {
-          toast.success("Thanks your account is crated successfully!");
+          toast.success("your account is crated successfully!");
           navigate(from, { replace: true });
         })
         .catch((error) => {

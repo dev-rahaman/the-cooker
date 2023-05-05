@@ -3,6 +3,7 @@
 import React, { useContext } from "react";
 import { Navigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
+import Spiner from "../Components/Spiner/Spiner";
 
 const PrivateRoutes = ({ children }) => {
   const { user, loading } = useContext(AuthContext);
@@ -13,11 +14,7 @@ const PrivateRoutes = ({ children }) => {
   }
 
   if (loading) {
-    return (
-      <div className="spinierContainer">
-        <div className="spinner"></div>
-      </div>
-    );
+    return <Spiner></Spiner>;
   }
 
   return (

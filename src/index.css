@@ -7,35 +7,14 @@
 
 /* active link  start*/
 .active {
-  color: rgb(255, 255, 255);
-  background-color: rgb(146, 97, 97);
+  color: #000;
 }
 a.active {
-  padding: 15px;
+  padding: 15px 40px;
+  background-color: #f9d72f;
+  border-radius: 50px;
 }
 /* active link  end*/
-
-/*  spinner start */
-.spinierContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.spinner {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 5px solid #ccc;
-  border-top-color: #333;
-  animation: spin 1s ease-in-out infinite;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-/*  spinner end */
 
 /*  Blog start */
 .blogFaq {
@@ -102,6 +81,21 @@ a.active {
   width: 480px;
   background-color: #e8ecf0;
   margin: 20px;
+  border-radius: 10px;
+}
+
+.recipeLikesEx {
+  width: 250px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: #cbd5e1;
+  margin: 20px;
+}
+
+.numbersOfRecipes {
+  width: 200px;
+  padding: 10px;
   border-radius: 10px;
 }
 /* blogs end */

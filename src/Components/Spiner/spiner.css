@@ -1,21 +1,14 @@
-.spinner {
-  position: relative;
-  width: 64px;
-  height: 64px;
-  margin: 0 auto;
+.spinierContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-.spinner-inner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 32px;
-  height: 32px;
-  margin-top: -16px;
-  margin-left: -16px;
+.spinner {
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  border: 3px solid rgba(0, 0, 0, 0.1);
-  border-top-color: #3498db;
+  border: 5px solid #ccc;
+  border-top-color: #333;
   animation: spin 1s ease-in-out infinite;
 }
 

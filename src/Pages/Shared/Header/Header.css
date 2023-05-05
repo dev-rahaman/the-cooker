@@ -3,9 +3,12 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: #cbd5e1;
-}
 
+  background-color: #111827;
+}
+.navbar-logo {
+  color: #f9d72f;
+}
 .menu__logo {
   font-size: 2rem;
   font-weight: bold;
@@ -39,6 +42,7 @@ ul li a {
   text-decoration: none;
   font-size: 20px;
   padding: 0 20px;
+  color: #fff;
 }
 
 .btnMenu button {

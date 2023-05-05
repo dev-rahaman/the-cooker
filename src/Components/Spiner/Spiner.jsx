@@ -3,16 +3,12 @@
 import React from "react";
 import "./spiner.css";
 
-const Spinner = ({ spinner }) => {
-  if (spinner) {
-    return (
-      <div className="spinner">
-        <div className="loader"></div>
-      </div>
-    );
-  } else {
-    return null;
-  }
+const Spinner = () => {
+  return (
+    <div className="spinierContainer">
+      <div className="spinner"></div>
+    </div>
+  );
 };
 
 export default Spinner;

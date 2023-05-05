@@ -13,7 +13,7 @@ const Header = () => {
     setIsOpen(!isOpen);
   };
   const { user, logOut } = useContext(AuthContext);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hover, setHover] = useState(false);
   const containerRef = useRef(null);
 
@@ -34,9 +34,9 @@ const Header = () => {
     };
   }, [containerRef]);
 
-  const handleMenuClick = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  // const handleMenuClick = () => {
+  //   setIsMenuOpen(!isMenuOpen);
+  // };
 
   const handleLogOut = () => {
     logOut()
@@ -48,7 +48,7 @@ const Header = () => {
     <>
       <nav className="menu">
         <div className="menu__logo">
-          <Link to="/" classNameName="navbar-logo">
+          <Link to="/" className="navbar-logo">
             The Cooker
           </Link>
         </div>
@@ -129,12 +129,12 @@ const Header = () => {
           ) : (
             <>
               <li className="navbar-item">
-                <ActiveLink to="/login" classNameName="navbar-link">
+                <ActiveLink to="/login" className="navbar-link">
                   Login
                 </ActiveLink>
               </li>
               <li className="navbar-item">
-                <ActiveLink to="/register" classNameName="navbar-link">
+                <ActiveLink to="/register" className="navbar-link">
                   Sign Up
                 </ActiveLink>
               </li>
