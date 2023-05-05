@@ -3,7 +3,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-
   background-color: #111827;
 }
 .navbar-logo {
@@ -23,6 +22,7 @@
   border: none;
   font-size: 1.2rem;
   cursor: pointer;
+  color: #f9cb2d;
 }
 
 .menu__list {
@@ -42,7 +42,7 @@ ul li a {
   text-decoration: none;
   font-size: 20px;
   padding: 0 20px;
-  color: #fff;
+  color: #f9cb2d;
 }
 
 .btnMenu button {
@@ -57,8 +57,8 @@ ul li a {
 
 .positionONe {
   position: absolute;
-  background-color: gray;
-  color: #fff;
+  background-color: #f9cb2d;
+  color: #000;
   border-radius: 10px;
   padding: 10px;
   width: 350px;
@@ -73,6 +73,7 @@ ul li a {
   .menu__logo {
     order: 1;
     font-size: 20px;
+    color: #fff;
   }
 
   .menu__toggle {
@@ -86,7 +87,7 @@ ul li a {
     width: 50%;
     z-index: 1;
     padding: 1rem;
-    background-color: #f700ff;
+    background-color: #f9cb2d;
     position: absolute;
     top: 55px;
     right: 300px;

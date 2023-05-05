@@ -19,15 +19,8 @@ const Chef = () => {
     <>
       <div className="chef-recipe-card">
         <img className="chef-picture-chefBanner" src={chefBanner} />
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            marginLeft: "10px",
-            lineHeight: "27px",
-          }}
-        >
-          <div style={{ width: "70%" }}>
+        <div className="chefPageContainer">
+          <div className="chefPageContainerLeft">
             <h2
               className="chef-name"
               style={{ fontSize: "30px", margin: "10px" }}

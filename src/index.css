@@ -21,7 +21,12 @@ a.active {
   font-size: 40px;
   margin-top: 20px;
 }
-
+.name {
+  color: #000;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px;
+}
 .blogAns {
   font-size: 20px;
 }
@@ -98,8 +103,23 @@ a.active {
   padding: 10px;
   border-radius: 10px;
 }
+.chefPageContainer {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  line-height: 27px;
+}
+.chefPageContainerLeft {
+  width: 70%;
+}
 /* blogs end */
 @media screen and (max-width: 768px) {
+  .chefPageContainer {
+    display: block;
+  }
+  .chefPageContainerLeft {
+    width: 70%;
+  }
   .blogs {
     margin: 20px 50px;
   }
@@ -120,5 +140,8 @@ a.active {
     margin-left: 0px;
     width: 400px;
     height: 230px;
+  }
+  .chefPageContainerLeft {
+    width: 100%;
   }
 }
